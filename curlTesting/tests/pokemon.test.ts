@@ -1,5 +1,9 @@
 import { curlRequest } from "../utils/curl";
 
+declare const process: {
+    exitCode?: number;
+};
+
 const BASE_URL = "https://pokeapi.co/api/v2";
 
 // ========================================

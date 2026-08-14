@@ -19,9 +19,13 @@ function curlRequest(url, method = "GET") {
 
                 const body = lines.join("\n");
 
-                const responseBody = body
-                    ? JSON.parse(body)
-                    : null;
+                let responseBody;
+                try {
+                    responseBody = body ? JSON.parse(body) : null;
+                } catch (e) {
+                    // If JSON parsing fails, return the raw body as a string
+                    responseBody = body || null;
+                }
 
                 resolve({
                     statusCode,
