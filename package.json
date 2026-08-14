@@ -1,0 +1,21 @@
+{
+  "name": "apiexcercisetesting",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000A\u0000P\u0000I\u0000t\u0000e\u0000s\u0000t\u0000i\u0000n\u0000g\u0000E\u0000x\u0000c\u0000e\u0000r\u0000s\u0000i\u0000s\u0000e\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lesmorisweb/APItestingExcersise.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/lesmorisweb/APItestingExcersise/issues"
+  },
+  "homepage": "https://github.com/lesmorisweb/APItestingExcersise#readme"
+}
