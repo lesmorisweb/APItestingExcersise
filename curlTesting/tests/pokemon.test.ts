@@ -1,10 +1,10 @@
 import { curlRequest } from "../utils/curl";
 
-const BASE_URL = "https://pokeapi.co/api/v2";
+declare const process: {
+    exitCode?: number;
+};
 
-// ========================================
-// TEST 1 - Get Pokemon by name
-// ========================================
+const BASE_URL = "https://pokeapi.co/api/v2";
 
 async function testGetPokemon(): Promise<void> {
 
@@ -30,11 +30,6 @@ async function testGetPokemon(): Promise<void> {
     console.log("✅ Pokemon name is correct");
 }
 
-
-// ========================================
-// TEST 2 - Validate Pokemon ID
-// ========================================
-
 async function testPokemonId(): Promise<void> {
 
     console.log("\nTest: Validate Pokemon ID");
@@ -57,11 +52,6 @@ async function testPokemonId(): Promise<void> {
 
     console.log("✅ Pokemon ID is correct");
 }
-
-
-// ========================================
-// TEST 3 - Validate Pokemon types
-// ========================================
 
 async function testPokemonTypes(): Promise<void> {
 
@@ -93,11 +83,6 @@ async function testPokemonTypes(): Promise<void> {
     console.log("✅ Pokemon has at least one type");
 }
 
-
-// ========================================
-// TEST 4 - Validate Pokemon abilities
-// ========================================
-
 async function testPokemonAbilities(): Promise<void> {
 
     console.log("\nTest: Validate Pokemon abilities");
@@ -127,11 +112,6 @@ async function testPokemonAbilities(): Promise<void> {
     console.log("✅ Abilities is an array");
     console.log("✅ Pokemon has at least one ability");
 }
-
-
-// ========================================
-// TEST 5 - Validate Pokemon sprites
-// ========================================
 
 async function testPokemonSprites(): Promise<void> {
 
@@ -163,11 +143,6 @@ async function testPokemonSprites(): Promise<void> {
     console.log("✅ front_default sprite exists");
 }
 
-
-// ========================================
-// TEST 6 - Pokemon does not exist
-// ========================================
-
 async function testPokemonNotFound(): Promise<void> {
 
     console.log("\nTest: Pokemon does not exist");
@@ -185,29 +160,16 @@ async function testPokemonNotFound(): Promise<void> {
     console.log("✅ Non-existent Pokemon returns 404");
 }
 
-
-// ========================================
-// RUN TESTS
-// ========================================
-
 async function runTests(): Promise<void> {
 
-    console.log("=================================");
-    console.log("        POKEMON TEST SUITE");
-    console.log("=================================");
+    console.log("POKEMON TEST SUITE");
 
     try {
-
         await testGetPokemon();
-
         await testPokemonId();
-
         await testPokemonTypes();
-
         await testPokemonAbilities();
-
         await testPokemonSprites();
-
         await testPokemonNotFound();
 
         console.log("\n🎉 All Pokemon tests passed!");

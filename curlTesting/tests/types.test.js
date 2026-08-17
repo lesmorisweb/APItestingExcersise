@@ -2,10 +2,6 @@ const { curlRequest } = require("../utils/curl");
 
 const BASE_URL = "https://pokeapi.co/api/v2";
 
-// ========================================
-// TEST 1 - Get type by name
-// ========================================
-
 async function testGetType() {
 
     console.log("\nTest: GET Type");
@@ -30,11 +26,6 @@ async function testGetType() {
     console.log("✅ Type name is correct");
 }
 
-
-// ========================================
-// TEST 2 - Validate type ID
-// ========================================
-
 async function testTypeId() {
 
     console.log("\nTest: Validate Type ID");
@@ -58,11 +49,6 @@ async function testTypeId() {
     console.log("✅ Type ID is correct");
 }
 
-
-// ========================================
-// TEST 3 - Validate damage relations
-// ========================================
-
 async function testDamageRelations() {
 
     console.log("\nTest: Validate damage relations");
@@ -85,11 +71,6 @@ async function testDamageRelations() {
 
     console.log("✅ damage_relations exists");
 }
-
-
-// ========================================
-// TEST 4 - Validate damage relation structure
-// ========================================
 
 async function testDamageRelationStructure() {
 
@@ -137,11 +118,6 @@ async function testDamageRelationStructure() {
     console.log("✅ half_damage_to is an array");
 }
 
-
-// ========================================
-// TEST 5 - Type does not exist
-// ========================================
-
 async function testTypeNotFound() {
 
     console.log("\nTest: Type does not exist");
@@ -159,27 +135,16 @@ async function testTypeNotFound() {
     console.log("✅ Non-existent type returns 404");
 }
 
-
-// ========================================
-// RUN TESTS
-// ========================================
-
 async function runTests() {
 
-    console.log("=================================");
-    console.log("          TYPES TEST SUITE");
-    console.log("=================================");
-
+    console.log("TYPES TEST SUITE");
+    
     try {
 
         await testGetType();
-
         await testTypeId();
-
         await testDamageRelations();
-
         await testDamageRelationStructure();
-
         await testTypeNotFound();
 
         console.log("\n🎉 All type tests passed!");

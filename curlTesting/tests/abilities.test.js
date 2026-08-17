@@ -2,10 +2,6 @@ const { curlRequest } = require("../utils/curl");
 
 const BASE_URL = "https://pokeapi.co/api/v2";
 
-// ========================================
-// TEST 1 - Get ability by name
-// ========================================
-
 async function testGetAbility() {
 
     console.log("\nTest: GET Ability");
@@ -30,11 +26,6 @@ async function testGetAbility() {
     console.log("✅ Ability name is correct");
 }
 
-
-// ========================================
-// TEST 2 - Validate ability ID
-// ========================================
-
 async function testAbilityId() {
 
     console.log("\nTest: Validate Ability ID");
@@ -57,11 +48,6 @@ async function testAbilityId() {
 
     console.log("✅ Ability ID is correct");
 }
-
-
-// ========================================
-// TEST 3 - Validate effect entries
-// ========================================
 
 async function testAbilityEffectEntries() {
 
@@ -93,11 +79,6 @@ async function testAbilityEffectEntries() {
     console.log("✅ effect_entries contains data");
 }
 
-
-// ========================================
-// TEST 4 - Ability does not exist
-// ========================================
-
 async function testAbilityNotFound() {
 
     console.log("\nTest: Ability does not exist");
@@ -115,31 +96,18 @@ async function testAbilityNotFound() {
     console.log("✅ Non-existent ability returns 404");
 }
 
-
-// ========================================
-// RUN TESTS
-// ========================================
-
 async function runTests() {
 
-    console.log("=================================");
-    console.log("       ABILITIES TEST SUITE");
-    console.log("=================================");
+    console.log("ABILITIES TEST SUITE");
 
     try {
-
         await testGetAbility();
-
         await testAbilityId();
-
         await testAbilityEffectEntries();
-
         await testAbilityNotFound();
 
         console.log("\n🎉 All ability tests passed!");
-
     } catch (error) {
-
         console.error(`\n❌ Test failed: ${error.message}`);
 
         process.exitCode = 1;
