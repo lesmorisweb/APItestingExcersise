@@ -17,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/lesmorisweb/APItestingExcersise/issues"
   },
-  "homepage": "https://github.com/lesmorisweb/APItestingExcersise#readme"
+  "homepage": "https://github.com/lesmorisweb/APItestingExcersise#readme",
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^7.0.2"
+  }
 }
