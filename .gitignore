@@ -1,5 +1,14 @@
 # Dependencies
 node_modules/
+npm-debug.log
+yarn-error.log
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE and editor files
 package-lock.json
 yarn.lock
 
@@ -17,6 +26,17 @@ build/
 *~
 .DS_Store
 
+# Build and dist directories
+dist/
+build/
+out/
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# OS files
+Thumbs.db
 # Environment variables
 .env
 .env.local
