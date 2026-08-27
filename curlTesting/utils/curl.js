@@ -10,14 +10,23 @@ function curlRequest(url, method = "GET") {
             }
             try {
                 const lines = stdout.trim().split("\n");
-                const statusCode = Number(lines.pop());
+                const statusCode = Number(lines.pop() || 0);
                 const body = lines.join("\n");
-                const responseBody = body
-                    ? JSON.parse(body)
-                    : null;
+
+                let responseBody = null;
+                if (body) {
+                    try {
+                        responseBody = JSON.parse(body);
+                    } catch (e) {
+                        responseBody = body;
+                    }
+                }
+
                 resolve({
                     statusCode,
-                    body: responseBody
+                    body: responseBody,
+                    raw: body,
+                    stderr
                 });
             } catch (parseError) {
                 reject(parseError);
