@@ -37,7 +37,7 @@ describe(" Validate abilities", () => {
             assert.ok(Array.isArray(response.body.effect_entries));
             assert.ok(response.body.effect_entries.length > 0);
         });
-    })
+    });
 
     describe("Test 4 - Validate ability generation", () => {
         it("Should the ability generation be correct", async () => {
